@@ -43,7 +43,7 @@ public class ArquivoTxt {
         try {
             FileWriter arq = new FileWriter(Caminho, finalDoArquivo1);
             PrintWriter gravarArq = new PrintWriter(arq);
-            gravarArq.append(Texto);
+            gravarArq.append(Texto + "\n");
             //gravarArq.println(Texto);
             gravarArq.close();
             return true;

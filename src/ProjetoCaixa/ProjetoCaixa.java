@@ -1,61 +1,63 @@
 package ProjetoCaixa;
 
-import java.util.ArrayList;
 import java.util.Scanner;
 
 public class ProjetoCaixa {
+	private static Process exec;
+
 	/**
-	  * @author Edililson David
+	 * @author Edililson David
 	 */
 	public static void main(String[] args) {
-		
 		String arq = ".\\Arquivos\\text.txt";
-		//Escrever no arquivo
-		String texto = "{\"conta\" : 3030, \"cpf\" : 05554558, \"dtNascimenti\" : 11/10/1997}\r\n";
+		Scanner scan = new Scanner(System.in);
 		
-		//Neste metodo quando eu passo true ele vai escrever no final do arquivo, se eu passar false ele continua escrevendo na mesma linha
-		if(ArquivoTxt.Write(arq, texto, true)) {
-			System.out.println("Arquivo salvo com sucesso!");
-		}else {
-			System.out.println("Erro ao salvar o arquivo");
+		Contas contas = new Contas();
+		System.out.println(" Escolha uma opção");
+		System.out.println(" 1 - Acessar sua conta");
+		System.out.println(" 2 - Criar uma conta");
+		int opcao;
+		opcao = scan.nextInt();
+		
+		//TODO Esse for serve para "LIMPAR A TELA"
+		for (int i = 0; i < 100; ++i) { 
+		       System.out.println();  
 		}
 		
-		String text = ArquivoTxt.Read(arq);
-		if(text.isEmpty()) {
-			System.out.println("Erro ao ler o arquivo");
-		}else {
-			System.out.println(text);
+		switch(opcao){
+		case 1:
+			contas.AcessarConta();
+			break;
+		case 2:
+			contas.CadastraConta();
+			break;
+		default:
+			System.out.println("Opção invalida");
 		}
+		
+		System.out.println(ArquivoTxt.Read(arq));
+		
 		
 		
 		/*
-		String arq = "./contas.txt";
-		if (!Arquivo.existeArquivo(arq)) {
-			Arquivo.criaArquivo(arq);
+		//TODO Modelo exemplo
+		
+		 = "{\n\"conta\" : 3030, \"cpf\" : 05554558, \"dtNascimenti\" : 11/10/1997\n}\r\n";
+		// TODO Neste metodo quando eu passo true ele vai escrever no final do
+		// arquivo,se eu passar false ele continua escrevendo na mesma linha
+		if (ArquivoTxt.Write(arq, texto, true)) {
+			System.out.println("Arquivo salvo com sucesso!");
+		} else {
+			System.out.println("Erro ao salvar o arquivo");
 		}
 		
-		Arquivo.escrever(arq, "{\n\"conta\" : 3020, \n\"cpf\" : 06402505508, \n\"dtNascimento\" : 26/11/2011 \n}");
-		Arquivo.escreverNoFinalDoArquivo(arq, "{\"conta\" : 3030, \"cpf\" : 05554558, \"dtNascimenti\" : 11/10/1997}");
-		ArrayList<String> lista = Arquivo.lerArquivo(arq);
-		
-		for(String string : lista){
-			System.out.println(string);
+		//TODO Essa parte seve para ler o arquivo
+		String text = ArquivoTxt.Read(arq);
+		if (text.isEmpty()) {
+			System.out.println("Erro ao ler o arquivo");
+		} else {
+			System.out.println(text);
 		}
 		*/
 	}
-
-	/*
-	 * public static void criarConta(boolean validar) { Scanner scan = new
-	 * Scanner(System.in); System.out.println("Bem vindo ao projeto Start Latam!");
-	 * System.out.
-	 * println("Você está criando uma conta, se já tiver uma conta digite sair!");
-	 * String opcao; opcao = scan.next(); if (opcao == "SAIR" && opcao == "sair") {
-	 * System.out.println("Saiu"); }
-	 * 
-	 * 
-	 * 
-	 * 
-	 * boolean cadastrarConta = true; while (true) { if (cadastrarConta) {
-	 * criarConta(cadastrarConta); } }
-	 */
 }

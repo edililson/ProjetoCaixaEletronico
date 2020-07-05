@@ -1,12 +1,3 @@
-{"conta" : 3030, "cpf" : 05554558, "dtNascimenti" : 11/10/1997}
-{"conta" : 3030, "cpf" : 05554558, "dtNascimenti" : 11/10/1997}
-{"conta" : 3030, "cpf" : 05554558, "dtNascimenti" : 11/10/1997}
-{"conta" : 3030, "cpf" : 05554558, "dtNascimenti" : 11/10/1997}
-{"conta" : 3030, "cpf" : 05554558, "dtNascimenti" : 11/10/1997}
-{"conta" : 3030, "cpf" : 05554558, "dtNascimenti" : 11/10/1997}{"conta" : 3030, "cpf" : 05554558, "dtNascimenti" : 11/10/1997}{"conta" : 3030, "cpf" : 05554558, "dtNascimenti" : 11/10/1997}{"conta" : 3030, "cpf" : 05554558, "dtNascimenti" : 11/10/1997}
-{"conta" : 3030, "cpf" : 05554558, "dtNascimenti" : 11/10/1997}
-{"conta" : 3030, "cpf" : 05554558, "dtNascimenti" : 11/10/1997}
-1{"conta" : 3030, "cpf" : 05554558, "dtNascimenti" : 11/10/1997}
-{"conta" : 3030, "cpf" : 05554558, "dtNascimenti" : 11/10/1997}
-{"conta" : 3030, "cpf" : 05554558, "dtNascimenti" : 11/10/1997}
-{"conta" : 3030, "cpf" : 05554558, "dtNascimenti" : 11/10/1997}
+{"conta":0,"senha":0,"saldo":0.0}
+{"conta":0,"senha":0,"cpf":"069","nome":"David","dtNascimento":"16/11/1997","saldo":0.0}
+{"conta":0,"senha":0,"cpf":"24458","nome":"Suducu","dtNascimento":"1645","saldo":0.0}
