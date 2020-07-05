@@ -9,7 +9,7 @@ public class ProjetoCaixa {
 	 */
 	public static void main(String[] args) {
 		
-		String arq = "text.txt";
+		String arq = ".\\Arquivos\\text.txt";
 		//Escrever no arquivo
 		String texto = "{\"conta\" : 3030, \"cpf\" : 05554558, \"dtNascimenti\" : 11/10/1997}\r\n";
 		
