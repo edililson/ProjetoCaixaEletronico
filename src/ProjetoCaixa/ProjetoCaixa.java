@@ -11,15 +11,14 @@ public class ProjetoCaixa {
 		
 		String arq = "text.txt";
 		//Escrever no arquivo
-		/*
-		String texto = "{\"conta\" : 3030, \"cpf\" : 05554558, \"dtNascimenti\" : 11/10/1997}";
+		String texto = "{\"conta\" : 3030, \"cpf\" : 05554558, \"dtNascimenti\" : 11/10/1997}\r\n";
 		
-		if(ArquivoTxt.Write(arq, texto)) {
+		//Neste metodo quando eu passo true ele vai escrever no final do arquivo, se eu passar false ele continua escrevendo na mesma linha
+		if(ArquivoTxt.Write(arq, texto, true)) {
 			System.out.println("Arquivo salvo com sucesso!");
 		}else {
 			System.out.println("Erro ao salvar o arquivo");
 		}
-		*/
 		
 		String text = ArquivoTxt.Read(arq);
 		if(text.isEmpty()) {

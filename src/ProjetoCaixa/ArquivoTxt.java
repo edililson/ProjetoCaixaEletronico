@@ -39,9 +39,9 @@ public class ArquivoTxt {
     
     //Serve para esquever no arquivo
     //TODO atualizar para não sobreescrever o arquivo e escrever as novas contas no final do arquivo
-    public static boolean Write(String Caminho,String Texto){
+    public static boolean Write(String Caminho,String Texto, boolean finalDoArquivo1){
         try {
-            FileWriter arq = new FileWriter(Caminho);
+            FileWriter arq = new FileWriter(Caminho, finalDoArquivo1);
             PrintWriter gravarArq = new PrintWriter(arq);
             gravarArq.append(Texto);
             //gravarArq.println(Texto);
