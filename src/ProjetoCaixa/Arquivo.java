@@ -26,4 +26,8 @@ public final class Arquivo {
 	public static boolean existeArquivo(String caminho) {
 		return arquivos.containsKey(caminho);
 	}
+	
+	public static void criaArquivo(String caminho) {
+		arquivos.put(caminho, new ArrayList<String>());
+	}
 }
