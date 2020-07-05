@@ -1,3 +1,5 @@
 {"conta":0,"senha":0,"saldo":0.0}
 {"conta":0,"senha":0,"cpf":"069","nome":"David","dtNascimento":"16/11/1997","saldo":0.0}
 {"conta":0,"senha":0,"cpf":"24458","nome":"Suducu","dtNascimento":"1645","saldo":0.0}
+{"conta":0,"senha":0,"cpf":"06909700522","nome":"David","dtNascimento":"26111997","saldo":0.0}
+{"conta":277,"senha":123456,"cpf":"1111","nome":"David","dtNascimento":"2222","saldo":0.0}

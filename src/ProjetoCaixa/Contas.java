@@ -42,8 +42,8 @@ public class Contas {
 		c1.setNome(scan.next());
 		// TODO Verificar se só tem letras
 		// TODO repetir informações para confirmar se está ok
-		setSenha(CadastrarSenha());
-		int numDaConta = NumeroDaConta();
+		c1.setSenha(CadastrarSenha());
+		c1.setConta(NumeroDaConta());
 		Gson gson = new GsonBuilder().create();
 		String texto = gson.toJson(c1, Contas.class);
 		ArquivoTxt.Write(arq, texto, true);
