@@ -94,6 +94,10 @@ public class Conta {
 
 		ContaDAO.getInstance().atualiza(this);
 	}
+	
+	public void gravarExtrato(){
+		//TODO criar um arquivo com o numero da conta
+	}
 
 	public boolean valida() {
 		return camposInvalidos.isEmpty();
@@ -148,7 +152,12 @@ public class Conta {
 	}
 
 	public String getExtrato() {
-		// TODO Auto-generated method stub
+		// TODO retornar o extrato da conta
+		return null;
+	}
+
+	public String getEmprestimo() {
+		// TODO fazer o sistema para retornar o valor maximo do emprestimo
 		return null;
 	}
 }

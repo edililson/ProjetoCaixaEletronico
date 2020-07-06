@@ -48,7 +48,12 @@ public class Caixa {
 		while (Util.logado) {
 			System.out.println(" Escolha uma opção");
 			System.out.println(" 1 - Saldo");
-			System.out.println(" 2 - ...");
+			System.out.println(" 2 - Extrato");
+			System.out.println(" 3 - Depósito");
+			System.out.println(" 4 - Saque");
+			System.out.println(" 5 - Emprestimos");
+			System.out.println(" 6 - Transferéncia");
+			System.out.println(" 7 - Sair");
 			int opcao;
 			opcao = Util.scan.nextInt();
 
@@ -68,6 +73,12 @@ public class Caixa {
 				saque();
 				break;
 			case 5:
+				emprestimo();
+				break;
+			case 6:
+				transferencia();
+				break;
+			case 7:
 				Util.logado = false;
 				break;
 			default:
@@ -76,7 +87,12 @@ public class Caixa {
 		}
 	}
 
+	
+
+	
+
 	private void saque() {
+		UtilView.limpaTela();
 		System.out.println("Digite o valor do saque");
 		BigDecimal valor = Util.scan.nextBigDecimal();
 		conta.atualizaSaldo(valor.multiply(new BigDecimal("-1")));
@@ -84,19 +100,28 @@ public class Caixa {
 	}
 
 	private void deposito() {
+		UtilView.limpaTela();
 		System.out.println("Digite o valor do Deposito");
 		BigDecimal valor = Util.scan.nextBigDecimal();
 		conta.atualizaSaldo(valor);
 	}
 
 	private void extrato() {
+		UtilView.limpaTela();
 		System.out.println("Extrato: " + conta.getExtrato());
 	}
 
 	private void saldo() {
 		UtilView.limpaTela();
 		System.out.println("Saldo: " + conta.getSaldo());
-		
+	}
+	
+	private void emprestimo() {
+		UtilView.limpaTela();
+		System.out.println("Emprestomo: " + conta.getEmprestimo());
 	}
 
+	private void transferencia() {
+		//TODO Fazer o sistema de transfereincia
+	}
 }
