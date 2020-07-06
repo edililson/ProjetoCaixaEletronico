@@ -1,4 +1,4 @@
-package ProjetoCaixa;
+package br.start.latam.ProjetoCaixa;
 
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
@@ -6,14 +6,15 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.ArrayList;
 
 /**
   * @author Edililson David
  */
 public class ArquivoTxt {
 	//Serve para poder ler o arquivo
-    public static String Read(String Caminho){
-        String conteudo = "";
+    public static ArrayList<String> read(String Caminho){
+        ArrayList<String> contasJson = new ArrayList<String>();
         try {
             FileReader arq = new FileReader(Caminho);
             BufferedReader lerArq = new BufferedReader(arq);
@@ -22,24 +23,31 @@ public class ArquivoTxt {
                 linha = lerArq.readLine();
                 while(linha!=null){
                 	//Aqui ele está lendo o arquivo e  pegando as quebras de linhas que estão no .txt
-                    conteudo += linha+"\r\n";
+                	contasJson.add(linha);
                     linha = lerArq.readLine();
                 }
                 arq.close();
-                return conteudo;
             } catch (IOException ex) {
                 System.out.println("Erro: Não foi possível ler o arquivo!");
-                return "";
             }
         } catch (FileNotFoundException ex) {
             System.out.println("Erro: Arquivo não encontrado!");
-            return "";
         }
+        return contasJson;
+    }
+    
+    public static void rewrite(String Caminho,ArrayList<String> Texto){
+    	String novoArquivo = "";
+    	for (String string : Texto) {
+    		novoArquivo += string + "\n"; 
+		}
+    	
+    	write(Caminho, novoArquivo, false);
     }
     
     //Serve para esquever no arquivo
     //TODO atualizar para não sobreescrever o arquivo e escrever as novas contas no final do arquivo
-    public static boolean Write(String Caminho,String Texto, boolean finalDoArquivo1){
+    public static boolean write(String Caminho,String Texto, boolean finalDoArquivo1){
         try {
             FileWriter arq = new FileWriter(Caminho, finalDoArquivo1);
             PrintWriter gravarArq = new PrintWriter(arq);
@@ -52,4 +60,5 @@ public class ArquivoTxt {
             return false;
         }
     }
+    
 }
