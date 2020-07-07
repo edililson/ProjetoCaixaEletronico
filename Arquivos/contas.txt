@@ -8,5 +8,9 @@
 {"numeroConta":681,"senha":123456,"cpf":"01234567890","nome":"Teste","dtNascimento":"20/06/1989","camposInvalidos":[]}
 {"numeroConta":144,"senha":123456,"cpf":"01234567890","nome":"Teste da Silva","dtNascimento":"05/07/2020","limiteCheque":0,"saldo":0,"camposInvalidos":[]}
 
-{"numeroConta":39,"senha":123456,"cpf":"111","nome":"Douglas","dtNascimento":"26111997","saldo":2000,"camposInvalidos":[]}
+
+
+
+
+{"numeroConta":39,"senha":123456,"cpf":"111","nome":"Douglas","dtNascimento":"26111997","saldo":4000,"camposInvalidos":[]}
 

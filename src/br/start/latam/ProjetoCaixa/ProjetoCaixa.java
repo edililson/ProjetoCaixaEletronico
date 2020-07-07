@@ -18,7 +18,6 @@ public class ProjetoCaixa {
 			System.out.println(" 2 - Criar uma conta");
 			int opcao;
 			opcao = Util.scan.nextInt();
-			
 
 			UtilView.limpaTela();
 

@@ -18,6 +18,7 @@ public class MSG {
 	public static String VOLTA_TELA_CADASTRO = MSG.get("VOLTA_TELA_CADASTRO");
 	public static String CONFIRMAR = MSG.get("CONFIRMAR");
 	
+	
 	//Construtor privado
 	private MSG() {}
 	

@@ -95,9 +95,7 @@ public class Conta {
 		ContaDAO.getInstance().atualiza(this);
 	}
 	
-	public void gravarExtrato(){
-		//TODO criar um arquivo com o numero da conta
-	}
+	
 
 	public boolean valida() {
 		return camposInvalidos.isEmpty();
@@ -150,10 +148,18 @@ public class Conta {
 	private boolean contemNumeros(String nome) {
 		return nome.matches(".*\\d.*");
 	}
-
-	public String getExtrato() {
-		// TODO retornar o extrato da conta
-		return null;
+	
+	public void gravarExtrato(String texto){
+		String arq = ".\\Arquivos\\extrato\\" + numeroConta + ".txt";
+		ArquivoTxt.write(arq, texto, true);
+	}
+	
+	public void getExtrato() {
+		String arq = ".\\Arquivos\\extrato\\" + numeroConta + ".txt";
+		ArrayList<String> array = ArquivoTxt.read(arq);
+		for (String string : array) {
+			System.out.println(string);
+		}
 	}
 
 	public String getEmprestimo() {

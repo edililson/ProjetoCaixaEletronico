@@ -96,7 +96,8 @@ public class Caixa {
 		System.out.println("Digite o valor do saque");
 		BigDecimal valor = Util.scan.nextBigDecimal();
 		conta.atualizaSaldo(valor.multiply(new BigDecimal("-1")));
-		
+		String texto = "Saque realizado no valor de: " + valor;
+		conta.gravarExtrato(texto);
 	}
 
 	private void deposito() {
@@ -104,11 +105,14 @@ public class Caixa {
 		System.out.println("Digite o valor do Deposito");
 		BigDecimal valor = Util.scan.nextBigDecimal();
 		conta.atualizaSaldo(valor);
+		String texto = "Deposito realizado no valor de: " + valor;
+		conta.gravarExtrato(texto);
 	}
 
 	private void extrato() {
 		UtilView.limpaTela();
-		System.out.println("Extrato: " + conta.getExtrato());
+		conta.getExtrato();
+		System.out.println("");
 	}
 
 	private void saldo() {
@@ -119,6 +123,7 @@ public class Caixa {
 	private void emprestimo() {
 		UtilView.limpaTela();
 		System.out.println("Emprestomo: " + conta.getEmprestimo());
+		
 	}
 
 	private void transferencia() {
